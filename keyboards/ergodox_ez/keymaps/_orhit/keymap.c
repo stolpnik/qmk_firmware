@@ -21,34 +21,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  ESC   |   1  |   2  |   3  |   4  |   5  | LEFT |           |   6  |   7  |   8  |   9  |   0  |   -  |   ^    |
+ * |  ESC   |   1  |   2  |   3  |   4  |   5  |   6  |           |   6  |   7  |   8  |   9  |   0  |   -  |   ^    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Del    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   @    |
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   @    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | BkSp   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|: / Cmd |
  * |--------+------+------+------+------+------|   [  |           |   ]  |------+------+------+------+------+--------|
  * | LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1| ALT  |^/Cmd | Left | Right|                                       |  Up  | Down |  _   |   |  | _ / L1 |
+ *   |Grv/Ct|  ALT |  Cmd | Left | Right|                                       |  Up  | Down |  _   |   ¥  | _ / L1 |
  *   `----------------------------------'                                       `-----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | App  | LGui |       | Alt  |Ctrl/Esc|
+ *                                        | App  | LGui |       | Left |  Right |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
- *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
- *                                 |      |ace   | End  |       | PgDn |        |      |
+ *                                 | Space|Delete|------|       |------|  Tab   |Enter |
+ *                                 |      |      | End  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
  */
 [BASE] = LAYOUT_ergodox_pretty(
   // left hand
   KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_6,              KC_6,    KC_7,    KC_8,    KC_9,              KC_0,           KC_MINS,  JP_CIRC,
-  KC_DEL,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(SYMB),             TG(SYMB),     KC_Y,    KC_U,    KC_I,    KC_O,              KC_P,           JP_AT,
+  KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(SYMB),             TG(SYMB),     KC_Y,    KC_U,    KC_I,    KC_O,              KC_P,           JP_AT,
   KC_BSPC,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,    LT(MDIA, KC_SCLN), GUI_T(KC_QUOT),
   KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    JP_LBRC,                  JP_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,           CTL_T(KC_SLSH), KC_RSFT,
-  CTL_T(KC_GRV), LALT_T(JP_PIPE),     LGUI_T(JP_TILD), KC_LEFT, KC_RGHT,                                              KC_UP,   KC_DOWN, JP_BSLS, JP_PIPE, LT(SYMB, JP_UNDS),
-                                                           ALT_T(KC_APP), KC_LGUI,                KC_LALT, CTL_T(KC_ESC),
+  CTL_T(KC_GRV),   KC_LALT,     KC_LGUI,       KC_LEFT, KC_RGHT,                                              KC_UP,   KC_DOWN, JP_BSLS, JP_YEN, LT(SYMB, JP_UNDS),
+                                                           ALT_T(KC_APP), KC_LGUI,                KC_LEFT, KC_RIGHT,
                                                                           KC_HOME,                 KC_PGUP,
-                                                         KC_SPC, KC_BSPC, KC_END,                  KC_PGDN, KC_TAB, KC_ENT
+                                                         KC_SPC, KC_DEL,  KC_END,                  KC_PGDN, KC_TAB, KC_ENT
 ),
 /* Keymap 1: Symbol Layer
  *
